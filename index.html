@@ -1,0 +1,42 @@
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单订阅转换</title>
+    <script>
+        function Conver() {
+            var backendurl = "http://ssc.sihai.gq/sub"
+            const suburl_node = document.getElementsByName("suburl")[0];
+            const newhost_node = document.getElementsByName("newhost")[0];
+            var suburl = suburl_node.value
+            var newhost = newhost_node.value
+            var encode_suburl = encodeURIComponent(suburl)
+            var newsuburl_node = document.getElementsByName("newsuburl")[0];
+            newsuburl_node.value = backendurl + "?suburl=" + encode_suburl + "&newhost=" + newhost
+        }
+    </script>
+    <style type="text/css">
+        .button {
+            width: 100px;
+            height: 50px;
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <p>原订阅链接👇</p>
+    <textarea name="suburl" spellcheck="false" rows="2" cols="100"></textarea>
+    <p>新host👇</p>
+    <input name="newhost" type="text" value="a.189.cn">
+    <br><br>
+    <button class="button" onclick="Conver()">转换</button>
+    <p>新订阅链接👇</p>
+    <textarea name="newsuburl" spellcheck="false" rows="3" cols="100"></textarea>
+    <p>将这个链接当作订阅链接导入你的客户端软件👆</p>
+    <p>Github Repository: <a href="https://github.com/imldy/ssc-web">imldy/ssc-web</a></p>
+</body>
+
+</html>
