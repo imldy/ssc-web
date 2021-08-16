@@ -13,8 +13,12 @@
             var suburl = suburl_node.value
             var newhost = newhost_node.value
             var encode_suburl = encodeURIComponent(suburl)
+            // 获取nameexclude
+            var nameexclude_node = document.getElementsByName("nameexclude")[0];
+            var nameexclude = nameexclude_node.value
+
             var newsuburl_node = document.getElementsByName("newsuburl")[0];
-            newsuburl_node.value = backendurl + "?suburl=" + encode_suburl + "&newhost=" + newhost
+            newsuburl_node.value = backendurl + "?suburl=" + encode_suburl + "&newhost=" + newhost + "&nameexclude=" + nameexclude
         }
     </script>
     <style type="text/css">
@@ -31,6 +35,8 @@
     <textarea name="suburl" spellcheck="false" rows="2" cols="100"></textarea>
     <p>新host👇</p>
     <input name="newhost" type="text" value="a.189.cn">
+    <p>节点名过滤👇</p>
+    <label>排除关键字：</label><input name="nameexclude" placeholder="测试,游戏" type="text">
     <br><br>
     <button class="button" onclick="Conver()">转换</button>
     <p>新订阅链接👇</p>
