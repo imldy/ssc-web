@@ -16,9 +16,10 @@
             // 获取nameexclude
             var nameexclude_node = document.getElementsByName("nameexclude")[0];
             var nameexclude = nameexclude_node.value
+            var encode_nameexclude = encodeURIComponent(nameexclude)
 
             var newsuburl_node = document.getElementsByName("newsuburl")[0];
-            newsuburl_node.value = backendurl + "?suburl=" + encode_suburl + "&newhost=" + newhost + "&nameexclude=" + nameexclude
+            newsuburl_node.value = backendurl + "?suburl=" + encode_suburl + "&newhost=" + newhost + "&nameexclude=" + encode_nameexclude
         }
     </script>
     <style type="text/css">
