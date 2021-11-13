@@ -37,20 +37,33 @@
             margin: auto;
             width: 50%;
         }
+
+        .small {
+            width: max-content;
+        }
+
+        .arg {
+            background-color: rgb(200, 224, 194);
+        }
+
+        .result {
+            background-color: rgb(229, 162, 130);
+            width: max-content;
+        }
     </style>
 </head>
 
 <body>
     <div id="main">
-        <p>原订阅链接👇</p>
+        <p class="arg small">原订阅链接👇</p>
         <textarea name="suburl" spellcheck="false" rows="2" cols="100"></textarea>
-        <p>新host👇</p>
+        <p class="arg small">新host👇</p>
         <input name="newhost" type="text" value="a.189.cn">
-        <p>节点名过滤👇</p>
+        <p class="arg small">节点名过滤👇</p>
         <label>排除关键字：</label><input name="nameexclude" placeholder="测试,游戏" type="text">
         <br><br>
         <button class="button" onclick="Conver()">转换</button>
-        <p>新订阅链接👇</p>
+        <p class="result small">新订阅链接👇</p>
         <textarea name="newsuburl" spellcheck="false" rows="3" cols="100"></textarea>
         <p>将这个链接当作订阅链接导入你的客户端软件👆</p>
         <p>Github Repository: <a href="https://github.com/imldy/ssc-web">imldy/ssc-web</a></p>
