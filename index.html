@@ -32,22 +32,29 @@
             height: 50px;
             color: rgb(255, 0, 0);
         }
+
+        #main {
+            margin: auto;
+            width: 50%;
+        }
     </style>
 </head>
 
 <body>
-    <p>原订阅链接👇</p>
-    <textarea name="suburl" spellcheck="false" rows="2" cols="100"></textarea>
-    <p>新host👇</p>
-    <input name="newhost" type="text" value="a.189.cn">
-    <p>节点名过滤👇</p>
-    <label>排除关键字：</label><input name="nameexclude" placeholder="测试,游戏" type="text">
-    <br><br>
-    <button class="button" onclick="Conver()">转换</button>
-    <p>新订阅链接👇</p>
-    <textarea name="newsuburl" spellcheck="false" rows="3" cols="100"></textarea>
-    <p>将这个链接当作订阅链接导入你的客户端软件👆</p>
-    <p>Github Repository: <a href="https://github.com/imldy/ssc-web">imldy/ssc-web</a></p>
+    <div id="main">
+        <p>原订阅链接👇</p>
+        <textarea name="suburl" spellcheck="false" rows="2" cols="100"></textarea>
+        <p>新host👇</p>
+        <input name="newhost" type="text" value="a.189.cn">
+        <p>节点名过滤👇</p>
+        <label>排除关键字：</label><input name="nameexclude" placeholder="测试,游戏" type="text">
+        <br><br>
+        <button class="button" onclick="Conver()">转换</button>
+        <p>新订阅链接👇</p>
+        <textarea name="newsuburl" spellcheck="false" rows="3" cols="100"></textarea>
+        <p>将这个链接当作订阅链接导入你的客户端软件👆</p>
+        <p>Github Repository: <a href="https://github.com/imldy/ssc-web">imldy/ssc-web</a></p>
+    </div>
 </body>
 
 </html>
