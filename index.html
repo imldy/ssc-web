@@ -7,7 +7,7 @@
     <title>简单订阅转换</title>
     <script>
         function Conver() {
-            var backendurl = "https://ssc.sihai.gq/sub"
+            var backendurl = "https://ssc.imldy.cn/sub"
             const suburl_node = document.getElementsByName("suburl")[0];
             const newhost_node = document.getElementsByName("newhost")[0];
             var suburl = suburl_node.value
@@ -22,8 +22,12 @@
             var nameexclude = nameexclude_node.value
             var encode_nameexclude = encodeURIComponent(nameexclude)
 
+            // 包含关键字
+            var encode_nameinclude = encodeURIComponent(document.getElementsByName("nameinclude")[0].value)
+
             var newsuburl_node = document.getElementsByName("newsuburl")[0];
             newsuburl_node.value = backendurl + "?suburl=" + encode_suburl + "&newhost=" + newhost + "&nameexclude=" + encode_nameexclude
+                + "&nameinclude=" + encode_nameinclude
         }
     </script>
     <style type="text/css">
@@ -61,9 +65,10 @@
         <p class="arg small">原订阅链接👇</p>
         <textarea name="suburl" spellcheck="false" rows="2" cols="100"></textarea>
         <p class="arg small">新host👇</p>
-        <input name="newhost" type="text" value="a.189.cn">
+        <input name="newhost" type="text" value="">
         <p class="arg small">节点名过滤👇</p>
-        <label>排除关键字：</label><input name="nameexclude" placeholder="测试,游戏" type="text">
+        <label>排除关键字：</label><input name="nameexclude" placeholder="测试,游戏" type="text"><br>
+        <label>包含关键字：</label><input name="nameinclude" placeholder="公免" type="text">
         <br><br>
         <button class="button" onclick="Conver()">转换</button>
         <p class="result small">新订阅链接👇</p>
